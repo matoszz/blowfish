@@ -1,0 +1,9 @@
+default: ""
+systems:
+  dfw2-ynot: # your server name
+    host: 10.0.0.1 # your management IP
+    port: 443
+    protocol: https
+    username: root # your bmc user
+    password: mattisthebest # your bmc password
+    secure: false
