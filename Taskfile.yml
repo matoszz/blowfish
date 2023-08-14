@@ -1,0 +1,15 @@
+# See: https://taskfile.dev/#/usage
+version: "3"
+
+tasks:
+  lint:
+    cmds:
+      - golangci-lint run
+
+  modules:
+    cmds:
+      - go mod tidy
+
+  build:
+    cmds:
+      - CGO_ENABLED=0 GOOS=darwin go build -mod=mod -a -o blowfish main.go && chmod +x blowfish
